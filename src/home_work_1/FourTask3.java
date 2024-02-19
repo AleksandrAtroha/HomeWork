@@ -4,7 +4,7 @@ import java.util.Scanner;
 
 public class FourTask3 {
     public static void main(String[] args) {
-        int result,a,b;
+        int a,b;
         Scanner console = new Scanner(System.in);
         System.out.println("Введите числа a и b");
          a = console.nextInt();

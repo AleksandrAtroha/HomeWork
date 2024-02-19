@@ -2,7 +2,6 @@ package home_work_1;
 
 import java.util.Objects;
 import java.util.Scanner;
-import java.util.concurrent.SynchronousQueue;
 
 public class SixTask1 {
     public static void main(String[] args) {
