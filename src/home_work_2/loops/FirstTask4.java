@@ -1,6 +1,4 @@
 package home_work_2.loops;
-
-import java.io.Console;
 import java.util.Scanner;
 
 public class FirstTask4 {
