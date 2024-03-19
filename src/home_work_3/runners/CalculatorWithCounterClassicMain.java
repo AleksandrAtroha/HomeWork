@@ -10,7 +10,9 @@ public class CalculatorWithCounterClassicMain {
         calculator.incrementCountOperation();
         result = calculator.degree(result,2);
         calculator.incrementCountOperation();
-        result = calculator.addition(calculator.multiplication(15,7),result);
+        result = calculator.addition(4.1, result);
+        calculator.incrementCountOperation();
+        result = calculator.addition(result, calculator.multiplication(15, 7));
         calculator.incrementCountOperation();
         calculator.incrementCountOperation();
         System.out.println("Результат выражения= "+result + " количество операций-" + calculator.getCountOperation());

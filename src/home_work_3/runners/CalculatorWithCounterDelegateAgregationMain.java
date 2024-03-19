@@ -8,8 +8,10 @@ public class CalculatorWithCounterDelegateAgregationMain {
     public static void main(String[] args) {
         CalculatorWithMathCopy calculator = new CalculatorWithMathCopy();
         CalculatorWithCounterAutoAgregation calculatorWithCounter = new CalculatorWithCounterAutoAgregation(calculator);
-        double result = calculatorWithCounter.degree(calculatorWithCounter.division(28,5),2);
-        result = calculatorWithCounter.addition(calculatorWithCounter.multiplication(15,7),result);
+        double result = calculatorWithCounter.division(28,5);
+        result = calculatorWithCounter.degree(result,2);
+        result = calculatorWithCounter.addition(4.1, result);
+        result = calculatorWithCounter.addition(result, calculatorWithCounter.multiplication(15, 7));
         System.out.println("Результат выражения= "+result + " количество операций-"+ calculatorWithCounter.getCountOperation());
     }
 }
