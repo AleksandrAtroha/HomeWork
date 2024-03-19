@@ -1,13 +1,23 @@
 Задание 1- WithoutCalculatorMain
+
 Задание 2
+
 •	Задание 2.1-2.4 – CalculatorWithOperator
+
 •	Задание 2.5 -CalculatorWithOperatorMain
+
 Задание 3
+
 •	Задание 3.1-3.2 – CalculatorWithMathCopy
+
 •	Задание 3.3 – CalculatorWithMathCopyMain
+
 Задание 4
+
 •	Задание 4.1-4.3 – CalculatorWithMathExtends
+
 •	Задание 4.4 – CalculatorWithMathExtendsMain
+
 Задание 5
 •	Задание 5.1-5.4 – CalculatorWithCounterClassic
 •	Задание 5.5 – CalculatorWithCounterClassicMain
