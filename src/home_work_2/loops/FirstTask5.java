@@ -54,28 +54,34 @@ public class FirstTask5 {
         }
         return amountOdd;
     }
-    public static void printFibonaci(int count){
+    public static String printFibonaci(int count){
+        StringBuilder str = new StringBuilder();
         int a = 0;
         int b = 1;
+        str.append(a).append(" ");
         for (int i = 0; i < count; i++) {
-            System.out.print(a + " ");
+            str.append(a).append(" ");
             int temp = a;
             a = b;
             b = temp + b;
         }
-        System.out.println();
+        return str.toString().trim();
     }
-    public static void printDigitsWithStep(int max,int min,int step){
+    public static String printDigitsWithStep(int min,int max,int step){
+        StringBuilder str = new StringBuilder();
         for (int i=min;i<=max;i+=step)
         {
-            System.out.print(i +" ");
+            str.append(i).append(" ");
         }
+        return  str.toString().trim();
     }
-    public static void  printReverseNumber(int number) {
+    public static String  printReverseNumber(int number) {
+        StringBuilder str = new StringBuilder();
         while (number > 0) {
-            System.out.print(number % 10 );
+            str.append(number % 10 );
             number = number / 10;
         }
+        return str.toString();
     }
     public static void main(String[] args) {
         Scanner console = new Scanner(System.in);
@@ -86,15 +92,15 @@ public class FirstTask5 {
         int a = console.nextInt();
         System.out.println("Количество четных цифр = "+ amountOfEvenDigits(a) + " Количество нечетных цифр = "+ amountOfOddDigits(a));
         System.out.println("Введите количество элементов ряда Фибоначи");
-        printFibonaci(console.nextInt());
+        System.out.println(printFibonaci(console.nextInt()));
         System.out.println("Введите минимальное значение");
         int min = console.nextInt();
         System.out.println("Введите максимальное значение");
         int max = console.nextInt();
         System.out.println("Введите шаг значение");
         int step = console.nextInt();
-        printDigitsWithStep(max,min,step);
+        System.out.println(printDigitsWithStep(max,min,step));
         System.out.println("Введите число");
-        printReverseNumber(console.nextInt());
+        System.out.println(printReverseNumber(console.nextInt()));
     }
 }

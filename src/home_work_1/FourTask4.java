@@ -3,7 +3,6 @@ import java.util.Scanner;
 
 public class FourTask4 {
     public static void main(String[] args) {
-        double result;
         Scanner console = new Scanner(System.in);
         System.out.println("Введите число");
         double a = console.nextDouble();
@@ -13,14 +12,18 @@ public class FourTask4 {
         int choose = console.nextInt();
         switch (choose)
         {
-            case 1: result = a/1024;
-            System.out.printf("%.3f Килобайт",result);
+            case 1: System.out.printf("%.3f Килобайт",convertInKbyte(a));
             break;
-            case 2: result = a*1024;
-            System.out.println(result + " Байт");
+            case 2: System.out.println(convertInKbyte(a) + " Байт");
             break;
             default: System.out.println("Введите число 1 или 2!");
             break;
         }
+    }
+    public static double convertInByte(double number){
+        return number*1024;
+    }
+    public static double convertInKbyte(double number){
+        return number/1024;
     }
 }

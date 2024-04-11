@@ -31,4 +31,7 @@ public class ThirdTask {
             System.out.printf("Уравнение не имеет вещественных корней, дискриминант = %.1f",d);
         }
     }
+    public static double calculateDiscriminant(double a,double b,double c){
+        return b*b-4*a*c;
+    }
 }

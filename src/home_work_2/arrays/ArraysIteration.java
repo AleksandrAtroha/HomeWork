@@ -86,6 +86,7 @@ public class ArraysIteration {
         }
     }
     public static void main(String[] args) {
+        IArraysOperation doWhileOperation = new DoWhileOperation();
         int[] array = ArraysUtils.arrayFromConsole();
         printAllElements(array);
         System.out.println();

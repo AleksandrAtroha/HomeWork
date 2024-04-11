@@ -3,7 +3,7 @@ package home_work_2.utils;
 import java.util.Scanner;
 
 public class SortUtils {
-    public static void sort(int[] arr){
+    public static int[] sort(int[] arr){
         int sizeArr = arr.length;
         for(int i=0;i<sizeArr;i++){
             for(int j =sizeArr-1;j>i;j--){
@@ -14,8 +14,9 @@ public class SortUtils {
                 }
             }
         }
+        return arr;
     }
-    public static void shake(int[] arr){
+    public static int[] shake(int[] arr){
         int left = 0, right = arr.length - 1;
         boolean flag = true;
         while ((left < right) && flag) {
@@ -39,5 +40,6 @@ public class SortUtils {
             }
             left++;
         }
+        return arr;
     }
 }

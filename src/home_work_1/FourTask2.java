@@ -9,8 +9,11 @@ public class FourTask2 {
         double a = console.nextDouble();
         double b = console.nextDouble();
         double c = console.nextDouble();
-        if((a>b && a<c) || (a<b&&a>c)) System.out.println("Число: " +a+" является средним");
-        else if((b>a && b<c) || (b<a&&b>c)) System.out.println("Число: " +b+" является средним");
-        else System.out.println("Число: " +c+" является средним");
+        System.out.println("Среднее число = " + getAverageNumber(a,b,c));
+    }
+    public static double getAverageNumber(double a, double b, double c){
+        if((a>b && a<c) || (a<b&&a>c)) return a;
+        if((b>a && b<c) || (b<a&&b>c)) return b;
+        return c;
     }
 }

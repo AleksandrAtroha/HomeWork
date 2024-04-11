@@ -7,13 +7,21 @@ public class FirstTask {
                 System.out.println("Число должно быть положительным.");
             }
             else {
-                long result = 1;
-                for (long i = 1; i <= number; i++) {
-                    result *= i;
-
-                    System.out.print(i+"*");
-                }
-                System.out.print("="+result);
+                System.out.println( getStringFormatResult(number,multiplyNumbers(number)));
             }
+    }
+    public static long multiplyNumbers(long end){
+        long result = 1;
+        for (long i = 1; i <= end; i++) {
+            result *= i;
+        }
+        return result;
+    }
+    public static String getStringFormatResult(long end,long result){
+        StringBuilder strResult = new StringBuilder();
+        for (int i = 1; i < end; i++) {
+            strResult.append(i).append(" * ");
+        }
+        return strResult.toString() + end + " = " + result;
     }
 }

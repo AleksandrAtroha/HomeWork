@@ -8,16 +8,17 @@ public class SixTask2 {
         Scanner console = new Scanner(System.in);
         System.out.println("Введите имя");
         String name = console.nextLine();
-        boolean result = Objects.equals(name,"Вася");
-        if(result) {
-            System.out.println("Привет!");
-            System.out.println("Я тебя так долго ждал");
+        System.out.println(checkName(name));
+    }
+    public static String checkName(String name){
+        if(Objects.equals(name, "Вася")) {
+            return "Привет!" + "\n" + "Я тебя так долго ждал";
         }
         else if (Objects.equals(name, "Анастасия")) {
-            System.out.println("Я тебя так долго ждал");
+            return "Я тебя так долго ждал";
         }
         else {
-            System.out.println("Добрый день, а вы кто?");
+            return "Добрый день, а вы кто?";
         }
     }
 }

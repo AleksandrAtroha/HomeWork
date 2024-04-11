@@ -15,9 +15,9 @@ public class FiveTask {
         boolean a = console.nextBoolean();
         System.out.println("У вас отпуск?");
         boolean b = console.nextBoolean();
-        boolean result = sleepIn(a,b);
-        if(result) System.out.println("Можно спать");
+        if(sleepIn(a,b)) System.out.println("Можно спать");
         else System.out.println("Пора вставать на работу");
 
     }
+
 }

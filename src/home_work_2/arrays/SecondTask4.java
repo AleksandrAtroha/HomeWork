@@ -3,37 +3,38 @@ package home_work_2.arrays;
 import home_work_2.utils.ArraysUtils;
 
 public class SecondTask4 {
-    public static void findAllEvenElements(int[]array){
+    public static int findAllEvenElements(int[]array){
         int sum =0;
         for (int j : array) {
             if (j % 2 == 0 && j > 0)
                 sum = sum + j;
         }
-        System.out.println("Cумма четных положительных элементов = " +sum);
+        return sum;
     }
-    public static void findMaxElementWithEvenIndex(int[] array){
+    public static int findMaxElementWithEvenIndex(int[] array){
         int i =0;
         int max = array[0];
         for (i=0;i<array.length;i++){
             if(i%2==0 && array[i]>max)
                 max = array[i];
         }
-        System.out.println("Максимальный элемент с четным индексом: " +max);
+        return max;
     }
-    public static void printElementsLessArithmetic(int[] array){
+    public static String printElementsLessArithmetic(int[] array){
+        StringBuilder str = new StringBuilder();
         int sum=0;
         for (int item : array) {
             sum = sum + item;
         }
         double average = (double) sum / array.length;
-        System.out.println("Все элементы ниже среднего арифметического:");
         for(int item:array)
         {
             if(item<average)
-                System.out.print(item +" ");
+                str.append(item).append(" ");
         }
+        return str.toString().trim();
     }
-    public static void findMinElements(int[]array) {
+    public static String findMinElements(int[]array) {
         int min1 = array[0];
         int min2 = array[1];
         for (int i = 2; i < array.length; i++) {
@@ -44,9 +45,9 @@ public class SecondTask4 {
                 min2 = array[i];
             }
         }
-        System.out.println("Минимальные элементы массива:" +min1+" и " + min2);
+        return "Минимальные элементы массива: " + min1 + " и " + min2;
     }
-    public  static void findSumNumbers(int[]array){
+    public  static int findSumNumbers(int[]array){
         int sum= 0;
         for(int item:array){
             while (item>0){
@@ -54,7 +55,7 @@ public class SecondTask4 {
                 item= item/10;
             }
         }
-        System.out.println("Сумма цифр= "+sum);
+       return sum;
     }
 
     public static void main(String[] args) {
@@ -63,11 +64,11 @@ public class SecondTask4 {
             System.out.print(item+" ");
         }
         System.out.println();
-        findAllEvenElements(array);
-        findMaxElementWithEvenIndex(array);
-        printElementsLessArithmetic(array);
+        System.out.println("Сумма четных положительных элементов массива= " +findAllEvenElements(array));
+        System.out.println("Максимальный элемент с четным индексом: " +findMaxElementWithEvenIndex(array));
+        System.out.println("Все элементы ниже среднего арифметического: " + printElementsLessArithmetic(array));
         System.out.println();
-        findMinElements(array);
-        findSumNumbers(array);
+        System.out.println(findMinElements(array));
+        System.out.println("Сумма цифр= "+findSumNumbers(array));
     }
 }

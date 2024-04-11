@@ -14,7 +14,6 @@ public class CalculatorWithCounterAutoCompositeInterfaceMain {
         result = calculator.degree(result,2);
         result = calculator.addition(4.1, result);
         result = calculator.addition(result, calculator.multiplication(15, 7));
-
         System.out.println("Результат выражения= "+result + " количество операций-"+ calculator.getCountOperation());
     }
 }

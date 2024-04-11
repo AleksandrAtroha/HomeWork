@@ -10,18 +10,20 @@ public class FirstTask1_2 {
         return  result;
     }
 
+
     public static void main(String[] args) {
         long number = Long.parseLong(args[0]);
         if (number < 1) {
             System.out.println("Число должно быть положительным и не =0.");
         }
-        for (int i = 1; i <= number; i++) {
-            if(i==number) System.out.print(i);
-            else{
-                System.out.print(i+"*");
-            }
-        }
-        System.out.println("="+recurs(number));
+        System.out.println(getStringFormatResult(number,recurs(number)));
 
+    }
+    public static String getStringFormatResult(long end,long result){
+        StringBuilder strResult = new StringBuilder();
+        for (int i = 1; i < end; i++) {
+            strResult.append(i).append(" * ");
+        }
+        return strResult.toString() + end + " = " + result;
     }
 }
