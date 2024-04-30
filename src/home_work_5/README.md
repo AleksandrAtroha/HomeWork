@@ -12,7 +12,11 @@
 Задача 5.4: класс NickComporator (package comparators- animal)
 
 Задача 6.1-6.3.1, 6.4:
+
 LinkedList - (package mains - LinkedList)
+
 ArrayList - (package mains - ArrayList)
+
 HashSet - (package mains - HashSet)
+
 TreeSet - (package mains - TreeSet)
